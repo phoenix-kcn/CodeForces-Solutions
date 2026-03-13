@@ -1,5 +1,5 @@
-// A. Next Round
-//link: https://codeforces.com/contest/158/problem/A
+// A. Binary Imbalance
+//link: https://codeforces.com/contest/1902/problem/A
 //author: iam-phoenix
 #include <bits/stdc++.h>
 using namespace std;
@@ -17,26 +17,22 @@ using vll = vector<ll>;
 #define endl '\n'
 
 void solve() {
-    
-    ll n, k, count;
-    cin >> n >> k;
-    
-    count = 0;
-    
-    vi score(n);
-    for(int i=0; i<n; i++){
-        cin >> score[i];
+    int n, count = 0, newN; cin >> n;
+    string s, newS; cin >> s;
+
+    bool hasZero = false;
+    for(int i = 0; i < n; i++) {
+        if(s[i] == '0') {
+            hasZero = true;
+            break;
+        }
     }
 
-    for(int i=0; i<n; i++){
-        if((k-1) >= 0){
-            if(score[i] >= score[k-1] && score[i] > 0){
-                count++;
-            }
-        }
-        
+    if(hasZero) {
+        cout << "YES" << endl;
+    } else {
+        cout << "NO" << endl;
     }
-    cout << count << endl;
 }
 
 int main() {
@@ -44,7 +40,11 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    solve();
+    int t;
+    cin >> t;
+    while (t--) {
+       solve();
+    }
 
     return 0;
 }
