@@ -1,5 +1,5 @@
-// 
-//link: 
+// B. Caisa and Pylons
+//link: https://codeforces.com/contest/463/problem/B
 //author: iam-phoenix
 #include <bits/stdc++.h>
 using namespace std;
@@ -27,11 +27,20 @@ using vpl = vector<pair<ll,ll>>;
 
 void solve() {
     
-    ll n;
+    ll n, x, energy=0, res=0, prev=0;
     cin >> n;
-    
-    // Main logic goes here
-    
+
+    while(n--){
+        cin >> x; 
+        energy += (prev-x);
+        if(energy<0) {
+            res -= energy;
+            energy = 0;
+        }
+        prev = x;
+    }
+
+    cout << res << endl;
 }
 
 int main() {
