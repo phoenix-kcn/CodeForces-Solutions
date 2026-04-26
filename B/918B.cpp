@@ -20,7 +20,6 @@ using vpl = vector<pair<ll,ll>>;
 #define no cout << "NO" << endl
 #define yes cout << "YES" << endl
 
-
 void solve() {
     
     int n, m;
