@@ -1,3 +1,6 @@
+// A. Eating Game
+// link: https://codeforces.com/problemset/problem/2200/A
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
